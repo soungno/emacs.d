@@ -1,0 +1,27 @@
+ll
+ls -al
+az 
+az acr list -o table
+az acr
+az acr show
+az acr show --ma,e acrMytripmy
+az acr repository list --name acrMytripmy --output table
+ll
+alias ll=ls -al
+ll
+ls -al
+cd workspaces/mytravel/
+ls
+ls -al
+cd www
+ls -al
+cd site
+ls -al
+cd ..
+ls -al
+conda env lsit
+conda
+env-info
+enc-info
+env-info
+exit

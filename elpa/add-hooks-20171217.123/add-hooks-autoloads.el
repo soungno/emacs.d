@@ -1,0 +1,59 @@
+;;; add-hooks-autoloads.el --- automatically extracted autoloads
+;;
+;;; Code:
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+
+;;;### (autoloads nil "add-hooks" "add-hooks.el" (23455 8118 569081
+;;;;;;  222000))
+;;; Generated autoloads from add-hooks.el
+
+(autoload 'add-hooks-pair "add-hooks" "\
+Call `add-hook' for each combined pair of items in HOOKS and FUNCTIONS.
+
+HOOKS can be a symbol or a list of symbols representing hook
+variables (the `-hook' suffix is implied).  FUNCTIONS can be a
+symbol, a lambda, or a list of either representing hook
+functions.  If lists are used, a function can be added to
+multiple hooks and/or multiple functions can be added to a hook.
+
+Example:
+
+  ELISP> (add-hooks-pair '(css-mode sgml-mode) 'emmet-mode)
+  nil
+  ELISP> css-mode-hook
+  (emmet-mode)
+  ELISP> sgml-mode-hook
+  (emmet-mode)
+
+\(fn HOOKS FUNCTIONS)" nil nil)
+
+(autoload 'add-hooks "add-hooks" "\
+Call `add-hooks-pair' on each cons pair in PAIRS.
+
+Each pair has a `car' for setting hooks and a `cdr' for setting
+functions to add to those hooks.  Pair values are passed to the
+HOOKS and FUNCTIONS arguments of `add-hooks-pair', respectively.
+
+Usage:
+
+  (add-hooks ((HOOKS . FUNCTIONS)...))
+
+Example:
+
+  ELISP> (add-hooks '(((css-mode sgml-mode) . emmet-mode)))
+  nil
+  ELISP> css-mode-hook
+  (emmet-mode)
+  ELISP> sgml-mode-hook
+  (emmet-mode)
+
+\(fn PAIRS)" nil nil)
+
+;;;***
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; End:
+;;; add-hooks-autoloads.el ends here

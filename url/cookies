@@ -1,0 +1,14 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("127.0.0.1"
+  [url-cookie "_xsrf" "2|f4e0e141|4d16de0617fda4f066ca7ca6c44d9b45|1543849187" "Wed, 02 Jan 2019 14:59:47 GMT" "/" "127.0.0.1" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:
